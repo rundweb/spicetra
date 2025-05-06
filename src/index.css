@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-primary {
+    @apply max-w-screen-xl m-auto p-4;
+  }
+  body {
+    @apply bg-Light;
+  }
+}
