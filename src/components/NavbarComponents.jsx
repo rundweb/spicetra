@@ -23,7 +23,7 @@ const NavbarComponents = () => {
   });
 
   return (
-    <div>
+    <div className="bg-Light">
       <div className="container-primary flex items-center justify-between">
         <div className="relative z-20">
           <img src={logo} loading="lazy" alt="logo spicetra" className="w-48" />
