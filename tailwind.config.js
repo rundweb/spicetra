@@ -24,7 +24,7 @@ export default {
         },
       },
       animation: {
-        grow: 'grow 5.1s ease-in-out infinite',
+        grow: 'grow 15s ease-in-out infinite',
       },
     },
   },

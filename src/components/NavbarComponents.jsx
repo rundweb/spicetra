@@ -35,7 +35,7 @@ const NavbarComponents = () => {
               <Link
                 to={item.href}
                 onClick={() => setActiveMenu(i)}
-                className={`text-lg ${
+                className={`text-base ${
                   activeMenu === i ? "text-Accent-secondary" : "text-Primary"
                 }`}
               >
@@ -47,7 +47,7 @@ const NavbarComponents = () => {
 
         {/* mobile */}
         <div
-          className={` font-inter md:hidden fixed bg-light top-0 min-h-screen w-full z-10 p-4 pt-20 flex flex-col items-center justify-center gap-4 ${
+          className={`font-inter md:hidden fixed bg-Light top-0 min-h-screen w-full z-10 p-4 pt-20 flex flex-col items-center justify-center gap-4 ${
             toggleActive ? "-right-full" : "right-0"
           } duration-500 ease-linear`}
         >
