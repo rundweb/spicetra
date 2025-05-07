@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 // data
-import { menuItem } from "../assets/data/data";
+import { menuItem, info, social } from "../assets/data/data";
 
 // images
 import logo from "../assets/images/logo_full.svg";
@@ -82,6 +82,29 @@ const NavbarComponents = () => {
 
   return (
     <div className="bg-Light">
+      <div className="hidden md:block bg-Accent-secondary">
+        <div className="container-primary px-4 py-2 flex items-center justify-between">
+          <div className="flex items-center gap-5 font-inter text-white/80 text-sm font-medium">
+            {info.map((item, i) => (
+              <div key={i} className="flex items-center gap-2 menus">
+                <div className="relative top-[1px]">
+                  <item.icon />
+                </div>
+                <p>{item.value}</p>
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-5 items-center text-white/90 menus">
+            {social.map((item, i) => (
+              <div key={i} className="cursor-pointer">
+                <div>
+                  <item.icon />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="container-primary flex items-center justify-between">
         <div className="relative z-20" ref={boxRef}>
           <img src={logo} loading="lazy" alt="logo spicetra" className="w-48" />

@@ -80,4 +80,54 @@ const services = [
   },
 ];
 
-export { menuItem, heroSlides, services };
+// icons
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+
+const info = [
+  {
+    icon: FiPhone,
+    value: "+62 812-3456-7890",
+  },
+  {
+    icon: FiMail,
+    value: "info@spicetra.com",
+  },
+  {
+    icon: FiMapPin,
+    value: "Jl. Rempah No. 27, Jakarta, Indonesia",
+  },
+];
+
+// icons
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+
+const social = [
+  {
+    icon: FaFacebookF,
+    title: "Facebook",
+  },
+  {
+    icon: FaTwitter,
+    title: "Twitter",
+  },
+  {
+    icon: FaInstagram,
+    title: "Instagram",
+  },
+  {
+    icon: FaLinkedinIn,
+    title: "LinkedIn",
+  },
+];
+
+
+const features = [
+  "Direct sourcing from certified local producers",
+  "Strict quality control and packaging standards",
+  "Export-ready logistics with global reach",
+  "Customer-first approach with long-term collaboration",
+];
+
+
+
+export { menuItem, heroSlides, services,info,social,features };

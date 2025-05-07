@@ -18,6 +18,7 @@ import { CgScrollV } from "react-icons/cg";
 
 // components
 import ServiceComponents from "../components/ServiceComponents";
+import AboutComponents from "../components/AboutComponents";
 
 const Home = () => {
   return (
@@ -59,6 +60,7 @@ const Home = () => {
         </Swiper>
       </section>
       <ServiceComponents/>
+      <AboutComponents/>
     </div>
   );
 };
