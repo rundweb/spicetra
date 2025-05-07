@@ -14,7 +14,9 @@ import { Autoplay } from "swiper/modules";
 import { heroSlides } from "../assets/data/data";
 
 // icon
-import { RiScrollToBottomLine } from "react-icons/ri";
+import { CgScrollV } from "react-icons/cg";
+
+// components
 import ServiceComponents from "../components/ServiceComponents";
 
 const Home = () => {
@@ -41,15 +43,15 @@ const Home = () => {
                   />
                 </div>
                 <div className="absolute w-full h-full flex items-center text-center justify-center top-0 left-0 flex-col gap-5 bg-Dark/30 p-4">
-                  <h1 className="text-Light font-extrabold font-Playfair text-6xl max-w-screen-lg md:leading-tight">
+                  <h1 data-aos="zoom-out"  data-aos-duration="1500" className="text-Light font-extrabold font-Playfair text-6xl max-w-screen-lg md:leading-tight">
                     {item.title}
                   </h1>
-                  <h2 className="text-Light/80 font-medium font-inter text-lg max-w-screen-sm">
+                  <h2 data-aos="zoom-out"  data-aos-duration="1500" className="text-Light/80 font-medium font-inter text-lg max-w-screen-sm">
                     {item.subtitle}
                   </h2>
                 </div>
                 <div className="absolute bottom-12 w-full flex items-center justify-center">
-                  <RiScrollToBottomLine className="text-Light/20 text-5xl animate-bounce"/>
+                  <CgScrollV className="text-Light/40 text-6xl animate-bounce"/>
                 </div>
               </div>
             </SwiperSlide>

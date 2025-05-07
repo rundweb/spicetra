@@ -3,14 +3,12 @@ import React from "react";
 // data
 import { services } from "../assets/data/data";
 
-
-
 const ServiceComponents = () => {
   return (
     <section className="container-primary grid lg:grid-cols-3 gap-5 py-10 lg:py-20 items-center">
       <div className="flex flex-col gap-5">
         {services.slice(0, 2).map((item, i) => (
-          <div key={i}>
+          <div key={i} data-aos="fade-right" data-aos-duration="1100">
             <div className="bg-gray-100 p-5 py-10 rounded-xl flex flex-col gap-4 relative overflow-hidden">
               <div className="w-16 h-16 bg-Light rounded-lg flex items-center justify-center">
                 <item.icon className="text-4xl text-Primary"/>
@@ -25,7 +23,7 @@ const ServiceComponents = () => {
           </div>
         ))}
       </div>
-      <div className="bg-gray-100 rounded-xl p-5">
+      <div className="bg-gray-100 rounded-xl p-5" data-aos="fade-up" data-aos-duration="1100">
         <div className="flex flex-col gap-4">
           <div>
             <img src={services[2].image} alt="service spicetra" loading="lazy" className="h-72 lg:h-96 w-full object-cover rounded-lg"/>
@@ -38,7 +36,7 @@ const ServiceComponents = () => {
       </div>
       <div className="flex flex-col gap-5">
         {services.slice(3, 5).map((item, i) => (
-          <div key={i}>
+          <div key={i} data-aos="fade-left" data-aos-duration="1100">
           <div className="bg-gray-100 p-5 py-10 rounded-xl flex flex-col gap-4 relative overflow-hidden">
             <div className="w-16 h-16 bg-Light rounded-lg flex items-center justify-center">
               <item.icon className="text-4xl text-Primary"/>

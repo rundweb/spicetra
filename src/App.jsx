@@ -10,7 +10,7 @@ import FooterComponents from "./components/FooterComponents"
 
 const App = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <NavbarComponents/>
       <Routes>
         <Route path="/" element={<Home/>} exact/>
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/contact" element={<Contact/>} exact/>
       </Routes>
       <FooterComponents/>
-    </>
+    </div>
   )
 }
 
