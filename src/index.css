@@ -9,4 +9,8 @@
   body {
     @apply bg-Light;
   }
+
+  .paralax{
+    background-image: url('./assets/images/spicetra_9.jpg');
+  }
 }

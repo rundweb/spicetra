@@ -26,6 +26,9 @@ export default {
       animation: {
         grow: 'grow 15s ease-in-out infinite',
       },
+      backgroundImage:{
+        "paralax":"url('./src/assets/images/spicetra_9.jpg')"
+      }
     },
   },
   plugins: [],

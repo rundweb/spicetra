@@ -19,6 +19,9 @@ import { CgScrollV } from "react-icons/cg";
 // components
 import ServiceComponents from "../components/ServiceComponents";
 import AboutComponents from "../components/AboutComponents";
+import ParalaxComponents from "../components/ParalaxComponents";
+import { Link } from "react-router-dom";
+import ButtonSmossh from "../element/ButtonSmossh";
 
 const Home = () => {
   return (
@@ -44,23 +47,39 @@ const Home = () => {
                   />
                 </div>
                 <div className="absolute w-full h-full flex items-center text-center justify-center top-0 left-0 flex-col gap-5 bg-Dark/30 p-4">
-                  <h1 data-aos="zoom-out"  data-aos-duration="1500" className="text-Light font-extrabold font-Playfair text-6xl max-w-screen-lg md:leading-tight">
+                  <h1
+                    data-aos="zoom-out"
+                    data-aos-duration="1500"
+                    className="text-Light font-extrabold font-Playfair text-6xl max-w-screen-lg md:leading-tight"
+                  >
                     {item.title}
                   </h1>
-                  <h2 data-aos="zoom-out"  data-aos-duration="1500" className="text-Light/80 font-medium font-inter text-lg max-w-screen-sm">
+                  <h2
+                    data-aos="zoom-out"
+                    data-aos-duration="1500"
+                    className="text-Light/80 font-medium font-inter text-lg max-w-screen-sm"
+                  >
                     {item.subtitle}
                   </h2>
+                  <Link
+                    className="relative mt-4"
+                    data-aos="zoom-out"
+                    data-aos-duration="1500"
+                  >
+                    <ButtonSmossh text={"Explore Products"}/>
+                  </Link>
                 </div>
                 <div className="absolute bottom-12 w-full flex items-center justify-center">
-                  <CgScrollV className="text-Light/40 text-6xl animate-bounce"/>
+                  <CgScrollV className="text-Light/40 text-6xl animate-bounce" />
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </section>
-      <ServiceComponents/>
-      <AboutComponents/>
+      <ServiceComponents />
+      <AboutComponents />
+      <ParalaxComponents />
     </div>
   );
 };
