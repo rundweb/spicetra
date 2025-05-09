@@ -25,7 +25,7 @@ const ServiceComponents = () => {
         x: 0,
         opacity: 1,
         duration: 2,
-        stagger: 0.1,
+        stagger: 0.2,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".service-right",
@@ -57,7 +57,7 @@ const ServiceComponents = () => {
         x: 0,
         opacity: 1,
         duration: 2,
-        stagger: 0.1,
+        stagger: 0.2,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".service-left",

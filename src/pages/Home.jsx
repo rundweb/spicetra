@@ -23,6 +23,7 @@ import ParalaxComponents from "../components/ParalaxComponents";
 import { Link } from "react-router-dom";
 import ButtonSmossh from "../element/ButtonSmossh";
 import CategoryComponents from "../components/CategoryComponents";
+import ProductsComponents from "../components/ProductsComponents";
 
 const Home = () => {
   return (
@@ -82,6 +83,7 @@ const Home = () => {
       <AboutComponents />
       <ParalaxComponents />
       <CategoryComponents/>
+      <ProductsComponents/>
     </div>
   );
 };

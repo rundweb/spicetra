@@ -176,7 +176,83 @@ const categories = [
   }
 ];
 
+// images
+import product1 from "../images/01-540x496.jpg";
+import product2 from "../images/02-540x496.jpg";
+import product3 from "../images/03-540x496.jpg";
+import product4 from "../images/04-540x496.jpg";
+import product5 from "../images/06-540x496.jpg";
+import product6 from "../images/07-540x496.jpg";
+import product7 from "../images/08-540x496.jpg";
+import product8 from "../images/09-540x496.jpg";
 
 
+const products = [
+  {
+    id: 1,
+    name: "Premium Grade Organic Cinnamon Sticks",
+    price: "$10",
+    oldPrice: "$15",
+    image: product1,
+    category: "featured",
+  },
+  {
+    id: 2,
+    name: "High Quality Black Pepper Seeds - Whole",
+    price: "$12",
+    oldPrice: "$16",
+    image: product2,
+    category: "best-seller",
+  },
+  {
+    id: 3,
+    name: "Natural Sun-Dried Nutmeg from Indonesia",
+    price: "$14",
+    oldPrice: "$18",
+    image: product3,
+    category: "populer",
+  },
+  {
+    id: 4,
+    name: "Handpicked Aromatic Cloves - Export Quality",
+    price: "$11",
+    oldPrice: "$13",
+    image: product4,
+    category: "featured",
+  },
+  {
+    id: 5,
+    name: "Grade A Turmeric Powder - Freshly Ground",
+    price: "$9",
+    oldPrice: "$12",
+    image: product5,
+    category: "best-seller",
+  },
+  {
+    id: 6,
+    name: "Dried Ginger Slices - All Natural Export Quality",
+    price: "$13",
+    oldPrice: "$17",
+    image: product6,
+    category: "populer",
+  },
+  {
+    id: 7,
+    name: "Whole Dried Cardamom Pods - Fragrant & Rich",
+    price: "$18",
+    oldPrice: "$22",
+    image: product7,
+    category: "featured",
+  },
+  {
+    id: 8,
+    name: "Fresh Mace Spice - Hand-Harvested in Indonesia",
+    price: "$16",
+    oldPrice: "$20",
+    image: product8,
+    category: "best-seller",
+  },
+];
 
-export { menuItem, heroSlides, services,info,social,features,categories };
+
+export { menuItem, heroSlides, services,info,social,features,categories,products };

@@ -10,17 +10,16 @@ import categori2 from "../assets/images/spicetra_18.jpg";
 // react router dom
 import { Link } from "react-router-dom";
 
-// icon
-import { LuMoveRight } from "react-icons/lu";
-
 // tilt.js
 import VanillaTilt from "vanilla-tilt";
 
 import gsap from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 gsap.registerPlugin(ScrollTrigger);
+
+import ButtonShop from "../element/ButtonShop";
+
 
 const CategoryComponents = () => {
   useEffect(() => {
@@ -42,19 +41,6 @@ const CategoryComponents = () => {
         stagger: 0.2,
         ease: "power2.out",
         scrollTrigger: { trigger: ".service-list", start: "top 80%" },
-      }
-    );
-
-    gsap.fromTo(
-      ".service-list-images",
-      { x: 100, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power2.out",
-        scrollTrigger: { trigger: ".service-list", start: "top 50%" },
       }
     );
   }, []);
@@ -92,7 +78,7 @@ const CategoryComponents = () => {
       </div>
       <div className="grid lg:grid-cols-6 gap-5 w-full">
         <div
-          className="lg:col-span-2 overflow-hidden rounded-md h-96 w-full relative service-list-images"
+          className="lg:col-span-2 overflow-hidden rounded-md h-96 w-full relative service-list"
           data-tilt
         >
           <div className="absolute w-full h-full top-0 left-0 bg-Dark/30 px-5 py-8 text-left flex flex-col gap-4">
@@ -103,12 +89,7 @@ const CategoryComponents = () => {
               Fresh & Premium Spices
             </h2>
             <Link className="mt-2 group w-max">
-              <div className="relative overflow-hidden h-10 px-8 w-max flex items-center justify-center gap-4 bg-Accent-primary text-white font-inter rounded-sm transition-all before:left-0 before:right-0 before:top-0 before:w-full before:h-0 after:left-0 after:right-0 after:bottom-0 after:w-full after:h-0 hover:before:h-2/4 hover:after:h-2/4 before:absolute after:absolute before:bg-white after:bg-white before:duration-300 after:duration-300 shadow-xl hover:shadow-Accent-primary">
-                <span className="relative z-10 group-hover:text-Accent-primary flex items-center gap-4">
-                  Shop Now{" "}
-                  <LuMoveRight className="text-xl relative top-[1px]" />
-                </span>
-              </div>
+              <ButtonShop/>
             </Link>
           </div>
           <img
@@ -119,7 +100,7 @@ const CategoryComponents = () => {
           />
         </div>
         <div
-          className="lg:col-span-4 overflow-hidden rounded-md h-96 w-full relative service-list-images"
+          className="lg:col-span-4 overflow-hidden rounded-md h-96 w-full relative service-list"
           data-tilt
         >
           <div className="absolute w-full h-full top-0 left-0 bg-Dark/30 px-5 py-8 text-left flex flex-col gap-4">
@@ -133,12 +114,7 @@ const CategoryComponents = () => {
               A trusted solution for your global supply chain.
             </p>
             <Link className="mt-2 group w-max">
-              <div className="relative overflow-hidden h-10 px-8 w-max flex items-center justify-center gap-4 bg-Accent-primary text-white font-inter rounded-sm transition-all before:left-0 before:right-0 before:top-0 before:w-full before:h-0 after:left-0 after:right-0 after:bottom-0 after:w-full after:h-0 hover:before:h-2/4 hover:after:h-2/4 before:absolute after:absolute before:bg-white after:bg-white before:duration-300 after:duration-300 shadow-xl hover:shadow-Accent-primary">
-                <span className="relative z-10 group-hover:text-Accent-primary flex items-center gap-4">
-                  Shop Now{" "}
-                  <LuMoveRight className="text-xl relative top-[1px]" />
-                </span>
-              </div>
+              <ButtonShop/>
             </Link>
           </div>
           <img
