@@ -128,6 +128,55 @@ const features = [
   "Customer-first approach with long-term collaboration",
 ];
 
+import { FaLeaf, FaFish, FaSnowflake } from "react-icons/fa";
+import { GiJasmine , GiHerbsBundle, GiFishCooked } from "react-icons/gi";
+
+const categories = [
+  {
+    title: "Whole Spices",
+    icon: GiJasmine,
+    description: "High-quality whole spices like black pepper, cloves, and cinnamon.",
+    href: "/category/whole-spices",
+    qty: 24
+  },
+  {
+    title: "Ground Spices",
+    icon: FaLeaf,
+    description: "Finely ground spices such as turmeric, ginger, and chili powder.",
+    href: "/category/ground-spices",
+    qty: 18
+  },
+  {
+    title: "Herbs & Leaves",
+    icon: GiHerbsBundle,
+    description: "Dried herbs and leaves like bay leaf, lemongrass, and kaffir lime leaf.",
+    href: "/category/herbs-leaves",
+    qty: 15
+  },
+  {
+    title: "Fresh Seafood",
+    icon: FaFish,
+    description: "Freshly caught fish, shrimp, and squid from trusted local fishermen.",
+    href: "/category/fresh-seafood",
+    qty: 30
+  },
+  {
+    title: "Frozen Seafood",
+    icon: FaSnowflake,
+    description: "Frozen seafood products with preserved freshness and quality.",
+    href: "/category/frozen-seafood",
+    qty: 22
+  },
+  {
+    title: "Dried Seafood",
+    icon: GiFishCooked,
+    description: "Sun-dried fish, dried squid, and other long-lasting seafood items.",
+    href: "/category/dried-seafood",
+    qty: 17
+  }
+];
 
 
-export { menuItem, heroSlides, services,info,social,features };
+
+
+export { menuItem, heroSlides, services,info,social,features,categories };

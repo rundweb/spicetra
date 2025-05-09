@@ -22,6 +22,7 @@ import AboutComponents from "../components/AboutComponents";
 import ParalaxComponents from "../components/ParalaxComponents";
 import { Link } from "react-router-dom";
 import ButtonSmossh from "../element/ButtonSmossh";
+import CategoryComponents from "../components/CategoryComponents";
 
 const Home = () => {
   return (
@@ -80,6 +81,7 @@ const Home = () => {
       <ServiceComponents />
       <AboutComponents />
       <ParalaxComponents />
+      <CategoryComponents/>
     </div>
   );
 };
