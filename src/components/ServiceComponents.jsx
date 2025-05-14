@@ -14,9 +14,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ServiceComponents = () => {
   useEffect(() => {
-    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-      perspective: 2000,
-    });
+    const isMobile = window.innerWidth < 700;
+
+    if (!isMobile) {
+      VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        perspective: 2000,
+      });
+    }
 
     gsap.fromTo(
       ".service-right",

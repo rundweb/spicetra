@@ -13,6 +13,12 @@ import gsap from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// icon
+import { IoMdHeart } from "react-icons/io";
+import { FaLink } from "react-icons/fa6";
+import { FaRegEye } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
@@ -29,9 +35,13 @@ const ProductsComponents = () => {
   );
 
   useEffect(() => {
-    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-      perspective: 2000,
-    });
+    const isMobile = window.innerWidth < 700;
+
+    if (!isMobile) {
+      VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        perspective: 2000,
+      });
+    }
 
     gsap.fromTo(
       ".product-list",
@@ -46,10 +56,22 @@ const ProductsComponents = () => {
       }
     );
   }, []);
+
+  const [productImage, setProductImage] = useState(true);
+  const [imageValue, setImageValue] = useState();
+  const openImage = (image) => {
+    gsap.fromTo(
+      ".product-image",
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 1, ease: "back.out" }
+    );
+    setProductImage(false);
+    setImageValue(image);
+  };
   return (
     <section className="container-primary py-10 flex flex-col gap-10">
       <div className="grid md:grid-cols-2 items-center justify-center w-full gap-5">
-        <div className="flex flex-col gap-4 product-list" >
+        <div className="flex flex-col gap-4 product-list">
           <h1 className="text-Primary font-inter font-bold text-4xl">
             Discover Our Products
           </h1>
@@ -85,14 +107,28 @@ const ProductsComponents = () => {
       <div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {filteredProduct.map((item, i) => (
-            <div key={i} data-tilt className="product-list">
-              <div className="flex flex-col px-4 pt-2 pb-10 shadow-xl rounded-lg items-center justify-center text-center">
-                <div>
+            <div key={i} data-tilt className="product-list ">
+              <div className="flex flex-col px-4 pt-2 pb-10 shadow-xl rounded-lg items-center justify-center text-center relative">
+                <div className=" group bg-black">
                   <img
                     src={item.image}
                     alt="product spicetra"
                     className="h-60 w-full object-cover"
                   />
+                  <div className="absolute flex flex-col gap-2 right-5 top-16 group-hover:-translate-y-8 group-hover:opacity-100 opacity-0 duration-300 transition-all ease-in-out">
+                    <div className="h-10 w-10 rounded-full shadow-md bg-white flex items-center justify-center text-Primary hover:bg-Primary hover:text-Light duration-300 ease-in-out cursor-pointer">
+                      <IoMdHeart className="relative top-[1px] text-lg" />
+                    </div>
+                    <div className="h-10 w-10 rounded-full shadow-md bg-white flex items-center justify-center text-Primary hover:bg-Primary hover:text-Light duration-300 ease-in-out cursor-pointer">
+                      <FaLink className="relative text-lg" />
+                    </div>
+                    <div
+                      className="h-10 w-10 rounded-full shadow-md bg-white flex items-center justify-center text-Primary hover:bg-Primary hover:text-Light duration-300 ease-in-out cursor-pointer"
+                      onClick={() => openImage(item.image)}
+                    >
+                      <FaRegEye className="relative text-lg" />
+                    </div>
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2 items-center justify-center">
                   <h1 className="text-Primary font-inter font-bold text-xl">
@@ -114,13 +150,31 @@ const ProductsComponents = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="md:hidden flex items-center justify-center md:justify-end product-list">
-          <Link className="" data-tilt>
-            <ButtonSmossh text={"View More Products"} />
-          </Link>
+        <div
+          className={`fixed z-20 top-0 right-0 w-full min-h-screen bg-Dark/30 ${
+            productImage ? "hidden" : "flex"
+          } items-center justify-center p-4`}
+        >
+          <div
+            onClick={() => setProductImage(!productImage)}
+            className="absolute top-5 right-5 text-white text-4xl cursor-pointer"
+          >
+            <IoClose />
+          </div>
+          <div className="product-image">
+            <img
+              src={imageValue}
+              alt="product spicetra"
+              className="w-96 h-96 object-cover"
+            />
+          </div>
         </div>
+      </div>
+      <div className="md:hidden flex items-center justify-center md:justify-end product-list">
+        <Link className="" data-tilt>
+          <ButtonSmossh text={"View More Products"} />
+        </Link>
+      </div>
     </section>
   );
 };

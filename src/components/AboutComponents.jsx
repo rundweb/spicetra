@@ -50,8 +50,8 @@ const AboutComponents = () => {
             data-aos="fade-left"
             data-aos-duration="1100"
           >
-            <FaShip className="text-Accent-secondary text-2xl" />
-            <h1 className="font-inter font-semibold text-Accent-secondary text-lg">
+            <FaShip className="text-Accent-primary text-2xl" />
+            <h1 className="font-inter font-semibold text-Accent-primary text-lg">
               About Spicetra
             </h1>
           </div>
@@ -81,10 +81,10 @@ const AboutComponents = () => {
                 data-aos="fade-left"
                 data-aos-duration="1100"
               >
-                <div className="relative top-[1px] text-Accent-secondary">
+                <div className="relative top-[1px] text-Accent-primary">
                   <BsFillBookmarkCheckFill />
                 </div>
-                <p className="font-medium text-Dark">{item}</p>
+                <p className="font-medium text-Dark/80">{item}</p>
               </div>
             ))}
           </div>

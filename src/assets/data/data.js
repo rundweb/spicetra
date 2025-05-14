@@ -254,5 +254,30 @@ const products = [
   },
 ];
 
+import { FaShippingFast, FaCertificate, FaHandshake } from "react-icons/fa";
 
-export { menuItem, heroSlides, services,info,social,features,categories,products };
+const whyChooseUs = [
+  {
+    icon: service1,
+    title: "100% Natural & Organic",
+    description: "Pure products with no additives or preservatives.",
+  },
+  {
+    icon: service2,
+    title: "Reliable Global Shipping",
+    description: "On-time delivery to worldwide destinations in the world.",
+  },
+  {
+    icon: service3,
+    title: "Certified Quality Standards",
+    description: "HACCP, ISO, and FDA certified handling for spicetra.",
+  },
+  {
+    icon: service4,
+    title: "Trusted by Global Clients",
+    description: "Preferred by global partners and culinary brands.",
+  },
+];
+
+
+export { menuItem, heroSlides, services,info,social,features,categories,products,whyChooseUs };

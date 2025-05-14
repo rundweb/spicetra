@@ -24,6 +24,7 @@ import { Link } from "react-router-dom";
 import ButtonSmossh from "../element/ButtonSmossh";
 import CategoryComponents from "../components/CategoryComponents";
 import ProductsComponents from "../components/ProductsComponents";
+import ChooseComponent from "../components/ChooseComponent";
 
 const Home = () => {
   return (
@@ -84,6 +85,7 @@ const Home = () => {
       <ParalaxComponents />
       <CategoryComponents/>
       <ProductsComponents/>
+      <ChooseComponent/>
     </div>
   );
 };

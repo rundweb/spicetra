@@ -20,16 +20,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 import ButtonShop from "../element/ButtonShop";
 
-
 const CategoryComponents = () => {
   useEffect(() => {
-    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-      perspective: 2000,
-    });
+    const isMobile = window.innerWidth < 700;
 
-    VanillaTilt.init(document.querySelectorAll("[data-tilt2]"), {
-      scale: 1.1,
-    });
+    if (!isMobile) {
+      VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        perspective: 2000,
+      });
+
+      VanillaTilt.init(document.querySelectorAll("[data-tilt2]"), {
+        scale: 1.1,
+      });
+    }
 
     gsap.fromTo(
       ".service-list",
@@ -47,13 +50,10 @@ const CategoryComponents = () => {
   return (
     <section className="container-primary py-10 flex items-center justify-center flex-col gap-10 text-center font-inter">
       <div className="flex flex-col gap-5">
-        <h1
-          className="font-bold text-Dark text-4xl service-list"
-          
-        >
+        <h1 className="font-bold text-Primary text-4xl service-list">
           Explore Our Categories
         </h1>
-        <h2 className="text-Dark service-list">
+        <h2 className="text-Primary service-list">
           From aromatic spices to fresh seafood, discover products crafted for
           global markets.
         </h2>
@@ -89,7 +89,7 @@ const CategoryComponents = () => {
               Fresh & Premium Spices
             </h2>
             <Link className="mt-2 group w-max">
-              <ButtonShop/>
+              <ButtonShop />
             </Link>
           </div>
           <img
@@ -114,7 +114,7 @@ const CategoryComponents = () => {
               A trusted solution for your global supply chain.
             </p>
             <Link className="mt-2 group w-max">
-              <ButtonShop/>
+              <ButtonShop />
             </Link>
           </div>
           <img
